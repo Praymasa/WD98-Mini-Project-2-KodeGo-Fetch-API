@@ -6,3 +6,7 @@
     color: white;
     font-weight: bold;
 }
+
+.nav .logo {
+    width: 50px;
+}

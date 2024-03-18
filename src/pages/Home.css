@@ -1,0 +1,12 @@
+body {
+    background-color: #E3E7D3 !important;
+}
+
+#home {
+    padding: 80px 0;
+    background-image: url(../../public/Images/background_image-removebg-preview.png);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

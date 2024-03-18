@@ -10,6 +10,7 @@ type CartItemProps = {
 
 type MenuItem = {
   id: number;
+  type: string;
   name: string;
   price: number;
   thumbnail: string;
@@ -43,7 +44,7 @@ export function CartItem({ id, quantity }: CartItemProps) {
       <img
         src={item.thumbnail}
         alt={item.name}
-        style={{ width: "125px", height: "75px", objectFit: "cover" }}
+        style={{ width: "125px", height: "75px", objectFit: "contain" }}
       />
       <div className="me-auto">
         <div>
@@ -55,10 +56,10 @@ export function CartItem({ id, quantity }: CartItemProps) {
           )}
         </div>
         <div className="text-muted" style={{ fontSize: ".75rem" }}>
-          ${item.price}
+          P{item.price}
         </div>
       </div>
-      <div> ${item.price * quantity}</div>
+      <div> P{item.price * quantity}</div>
       <Button
         variant="outline-danger"
         size="sm"

@@ -1,3 +1,7 @@
-body {
+html {
     background-color: #E3E7D3;
+}
+
+.root {
+    margin: 0 !important;
 }

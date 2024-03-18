@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { Button, Card } from "react-bootstrap";
 import { useOrderCart } from "../context/OrderCartContext";
 
@@ -9,7 +9,13 @@ type MenuItem = {
   thumbnail: string;
 };
 
-export function OrderMenuItem({ id }: { id: number }) {
+export function OrderMenuItem({
+  id,
+  thumbnail,
+}: {
+  id: number;
+  thumbnail: string;
+}) {
   const [menuItem, setMenuItem] = useState<MenuItem | null>(null);
   const {
     getItemQuantity,
@@ -20,10 +26,20 @@ export function OrderMenuItem({ id }: { id: number }) {
   const quantity = getItemQuantity(id);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/menu/${id}`)
-      .then((response) => response.json())
-      .then((data) => setMenuItem(data))
-      .catch((error) => console.error("Error fetching menu item:", error));
+    const fetchMenuItem = async () => {
+      try {
+        const response = await fetch(`http://localhost:3000/menu/${id}`);
+        if (!response.ok) {
+          throw new Error("Failed to fetch menu item");
+        }
+        const data = await response.json();
+        setMenuItem(data);
+      } catch (error) {
+        console.error("Error fetching menu item:", error);
+      }
+    };
+
+    fetchMenuItem();
   }, [id]);
 
   if (!menuItem) {
@@ -34,9 +50,10 @@ export function OrderMenuItem({ id }: { id: number }) {
     <Card className="h-100">
       <Card.Img
         variant="top"
-        src={menuItem.thumbnail}
+        src={thumbnail}
         height="300px"
         style={{ objectFit: "cover" }}
+        alt={`Image for ${menuItem.name}`}
       />
       <Card.Body className="d-flex flex-column">
         <Card.Title className="d-flex justify-content-between align-items-baseline mb-4">

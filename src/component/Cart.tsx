@@ -42,7 +42,7 @@ export function Cart({ isOpen }: OrderCartProps) {
   return (
     <Offcanvas show={isOpen} onHide={closeCart} placement="end">
       <Offcanvas.Header closeButton>
-        <Offcanvas.Title>Cart</Offcanvas.Title>
+        <Offcanvas.Title>Order Cart</Offcanvas.Title>
       </Offcanvas.Header>
       <Offcanvas.Body>
         {isLoading ? (

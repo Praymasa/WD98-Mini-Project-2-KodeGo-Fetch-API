@@ -1,4 +1,5 @@
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import Image from "react-bootstrap/Image";
 import "./Navigation.css";
 import { Link } from "react-router-dom";
 import { useOrderCart } from "../context/OrderCartContext";
@@ -7,19 +8,38 @@ export function Navigation() {
   const { openCart, cartQuantity } = useOrderCart();
   return (
     <>
-      <Navbar sticky="top" className="nav mb-3" data-bs-theme="dark">
+      <Navbar expand="lg" sticky="top" className="nav" data-bs-theme="dark">
         <Container>
-          <Nav className="me-auto">
-            <Nav.Link to="/" as={Link}>
-              Home
-            </Nav.Link>
+          <Navbar.Brand href="#home">
+            <Image
+              src="../../Images/logo-big-removebg-preview.png"
+              className="logo"
+            />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link to="/" as={Link}>
+                Home
+              </Nav.Link>
+              <Nav.Link to="/about" as={Link}>
+                About
+              </Nav.Link>
+              <Nav.Link to="/menu" as={Link}>
+                Menu
+              </Nav.Link>
+              <Nav.Link to="/services" as={Link}>
+                Services
+              </Nav.Link>
+              <Nav.Link to="/contact" as={Link}>
+                Contact Us
+              </Nav.Link>
+            </Nav>
             <Nav.Link to="/orderSection" as={Link}>
-              Store
+              Order Now
             </Nav.Link>
-            <Nav.Link to="/about" as={Link}>
-              About
-            </Nav.Link>
-          </Nav>
+          </Navbar.Collapse>
+
           {cartQuantity > 0 && (
             <Button
               onClick={openCart}
