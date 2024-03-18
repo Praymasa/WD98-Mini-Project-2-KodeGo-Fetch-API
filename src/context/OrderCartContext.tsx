@@ -48,7 +48,7 @@ export function OrderCartProvider({ children }: OrderCartProviderProps) {
   const increaseCartQuantity = async (id: number) => {
     try {
       // Fetch item details from API
-      const response = await fetch(`http://localhost:3000/menu${id}`);
+      const response = await fetch(`http://localhost:3000/menu/${id}`);
       if (!response.ok) {
         throw new Error("Failed to fetch item details");
       }

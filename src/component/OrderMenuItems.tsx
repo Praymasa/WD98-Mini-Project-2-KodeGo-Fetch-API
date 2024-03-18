@@ -4,10 +4,7 @@ import { useOrderCart } from "../context/OrderCartContext";
 
 type MenuItem = {
   id: number;
-  menuType: string;
-  drinkType?: string;
   name: string;
-  description?: string;
   price: number;
   thumbnail: string;
 };
@@ -23,7 +20,7 @@ export function OrderMenuItem({ id }: { id: number }) {
   const quantity = getItemQuantity(id);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/menu${id}`)
+    fetch(`http://localhost:3000/menu/${id}`)
       .then((response) => response.json())
       .then((data) => setMenuItem(data))
       .catch((error) => console.error("Error fetching menu item:", error));

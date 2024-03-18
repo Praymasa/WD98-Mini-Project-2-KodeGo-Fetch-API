@@ -21,7 +21,7 @@ export function Cart({ isOpen }: OrderCartProps) {
   useEffect(() => {
     const fetchMenuItems = async () => {
       try {
-        const response = await fetch("http://localhost:3000/menu");
+        const response = await fetch("http://localhost:3000/menu/");
         if (!response.ok) {
           throw new Error("Failed to fetch menu items");
         }

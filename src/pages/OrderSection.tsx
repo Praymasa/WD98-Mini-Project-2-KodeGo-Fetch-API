@@ -6,7 +6,6 @@ export function OrderSection() {
   // Define an interface representing the structure of each item
   interface MenuItem {
     id: number;
-    // Add other properties as needed
   }
 
   // Define the type for the itemsMenu array

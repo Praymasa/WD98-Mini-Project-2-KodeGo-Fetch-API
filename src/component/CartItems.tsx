@@ -22,7 +22,7 @@ export function CartItem({ id, quantity }: CartItemProps) {
   useEffect(() => {
     const fetchItem = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/menu${id}`);
+        const response = await fetch(`http://localhost:3000/menu/${id}`);
         if (!response.ok) {
           throw new Error("Failed to fetch item details");
         }
