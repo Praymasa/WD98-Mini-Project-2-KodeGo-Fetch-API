@@ -1,0 +1,16 @@
+#footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #89023E !important;
+    color: white;
+}
+
+#footer li {
+    list-style: none;
+}
+
+#footer a {
+    text-decoration: none;
+    color: white;
+}

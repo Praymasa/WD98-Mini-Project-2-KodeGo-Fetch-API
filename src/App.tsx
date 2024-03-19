@@ -8,6 +8,7 @@ import { OrderSection } from "./pages/OrderSection";
 import { Navigation } from "./component/Navigation";
 import { OrderCartProvider } from "./context/OrderCartContext";
 import "./App.css";
+import { Footer } from "./component/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/orderSection" element={<OrderSection />} />
       </Routes>
+      <Footer />
     </OrderCartProvider>
   );
 }

@@ -1,5 +1,7 @@
 body {
     background-color: #E3E7D3 !important;
+    font-family: 'Montserrat', sans-serif !important;
+
 }
 
 #home {
@@ -9,4 +11,90 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+#home .welcome-page {
+    background-color: #b9bdada1;
+}
+
+* h2 {
+    color: #89023E !important;
+    font-family: "Mansalva", sans-serif;
+}
+
+* h3 {
+    color: #89023E !important;
+    font-weight: bold;
+}
+
+.box {
+    background-color: #89023f;
+    border-radius: 3px;
+    box-decoration-break: 3px 3px 5px #ff9eca;
+}
+
+#vmc,
+#team {
+    background-color: #07393C;
+}
+
+#accredited img {
+    margin-top: 50px;
+    width: 200px;
+    height: 150px;
+    object-fit: contain;
+}
+
+#catering {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #07393C !important;
+    border-radius: 15px;
+}
+
+#catering .catering-inquire-btn {
+    margin-left: 70px;
+    padding: 10px;
+    text-align: center;
+    background-color: #E3E7D3;
+    box-shadow: 3px 3px 5px #E3E7D3;
+    color: #07393C;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+#catering img {
+    margin-top: 3rem;
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    border-bottom: 10px solid #E3E7D3;
+    border-top: 10px solid #E3E7D3;
+    border-right: 10px solid #E3E7D3;
+    border-radius: 50%;
+}
+
+#catering-form .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 3rem;
+    position: relative;
+    padding: 25px;
+    background-color: #07393C !important;
+    border-radius: 8px;
+}
+
+.form-container {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 15px;
+    background-color: #07393C !important;
+    border-radius: 10px;
 }
