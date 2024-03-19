@@ -2,7 +2,6 @@ import { Col, Container, Row } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import { CardComponent } from "../component/CardComponent";
 import { ListOfDrinks } from "../component/ListOfDrinks";
-import { CrazyDrinkCard1 } from "../component/CrazyDrinkCard1";
 
 export function Menu() {
   return (
